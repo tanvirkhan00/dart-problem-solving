@@ -85,25 +85,37 @@ import 'dart:io';
 
 //Problem-5: Calculate all positive numbers
 
+// void main() {
+//   print('Enter a Positive Number: ');
+//   String? input = stdin.readLineSync();
+//   if (input == null || input.trim().isEmpty) {
+//     print("Please enter a positive number. You can't run with null");
+//     print("Enter a Positive Number: ");
+//     input = stdin.readLineSync();
+//     if (input == null || input.trim().isEmpty) {
+//       print("You are rubbish. You aren't give me any input");
+//       return;
+//     }
+//   }
+//   int inputValue = int.parse(input);
+//   int result = 0;
+
+//   for (int i = 1; i <= inputValue; i++) {
+//     result = result + i;
+//   }
+
+//   print('The input value is $inputValue');
+//   print('The result is $result');
+// }
+
+// Problem-6: Multiplication Table
+
 void main() {
-  print('Enter a Positive Number: ');
+  print('Type a number: ');
   String? input = stdin.readLineSync();
-  if (input == null || input.trim().isEmpty) {
-    print("Please enter a positive number. You can't run with null");
-    print("Enter a Positive Number: ");
-    input = stdin.readLineSync();
-    if (input == null || input.trim().isEmpty) {
-      print("You are rubbish. You aren't give me any input");
-      return;
-    }
-  }
-  int inputValue = int.parse(input);
-  int result = 0;
+  int inputValue = int.parse(input!);
 
-  for (int i = 1; i <= inputValue; i++) {
-    result = result + i;
+  for (int i = 1; i <= 10; i++) {
+    print("$inputValue * $i = ${inputValue * i}");
   }
-
-  print('The input value is $inputValue');
-  print('The result is $result');
 }
