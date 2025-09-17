@@ -65,20 +65,45 @@ import 'dart:io';
 
 //Problem-4: Palindrome Cheker
 
+// void main() {
+//   print('Type a word');
+//   String? input = stdin.readLineSync();
+//   if (input == null || input.trim().isEmpty) {
+//     print('❌ Invalid input! Please enter a word.');
+//     return;
+//   }
+//   String inputValue = input.toLowerCase();
+
+//   String reversed = inputValue.split('').reversed.join();
+
+//   if (inputValue == reversed) {
+//     print('$inputValue is palindrom word');
+//   } else {
+//     print('$inputValue is not palindrome word');
+//   }
+// }
+
+//Problem-5: Calculate all positive numbers
+
 void main() {
-  print('Type a word');
+  print('Enter a Positive Number: ');
   String? input = stdin.readLineSync();
   if (input == null || input.trim().isEmpty) {
-    print('❌ Invalid input! Please enter a word.');
-    return;
+    print("Please enter a positive number. You can't run with null");
+    print("Enter a Positive Number: ");
+    input = stdin.readLineSync();
+    if (input == null || input.trim().isEmpty) {
+      print("You are rubbish. You aren't give me any input");
+      return;
+    }
   }
-  String inputValue = input.toLowerCase();
+  int inputValue = int.parse(input);
+  int result = 0;
 
-  String reversed = inputValue.split('').reversed.join();
-
-  if (inputValue == reversed) {
-    print('$inputValue is palindrom word');
-  } else {
-    print('$inputValue is not palindrome word');
+  for (int i = 1; i <= inputValue; i++) {
+    result = result + i;
   }
+
+  print('The input value is $inputValue');
+  print('The result is $result');
 }
