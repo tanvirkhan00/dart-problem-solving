@@ -1,5 +1,3 @@
-import 'dart:io';
-
 // Problem 1: Check odd and even number
 // void main() {
 //   print('Enter a number: ');
@@ -110,12 +108,62 @@ import 'dart:io';
 
 // Problem-6: Multiplication Table
 
-void main() {
-  print('Type a number: ');
-  String? input = stdin.readLineSync();
-  int inputValue = int.parse(input!);
+// void main() {
+//   print('Type a number: ');
+//   String? input = stdin.readLineSync();
+//   int inputValue = int.parse(input!);
 
-  for (int i = 1; i <= 10; i++) {
-    print("$inputValue * $i = ${inputValue * i}");
+//   for (int i = 1; i <= 10; i++) {
+//     print("$inputValue * $i = ${inputValue * i}");
+//   }
+// }
+
+// Problem: Library Management System
+
+// class Book {
+//   String title;
+//   String author;
+//   String isbn;
+//   bool isAvilable;
+
+//   Book(this.title, this.author, this.isbn, {this.isAvilable = true});
+
+//   void borrowBook() {
+//     if (isAvilable) {
+//       isAvilable = false;
+//       print("$title — the book is borrowed");
+//     } else {
+//       print("$title — the book is not available");
+//     }
+//   }
+// }
+
+// void main() {
+//   // Create an instance of Book
+//   Book myBook = Book("The Alchemist", "Paulo Coelho", "12345");
+
+//   // Borrow the book
+//   myBook.borrowBook();
+
+//   // Try borrowing again
+//   myBook.borrowBook();
+// }
+
+class Car {
+  String brand;
+  String model;
+  int year;
+
+  Car({required this.brand, required this.model, required this.year});
+
+  void displayInfo() {
+    print("Car Brand: $brand");
+    print("Car Model: $model");
+    print("Car Year: $year");
   }
+}
+
+void main() {
+  Car myCar = Car(brand: 'toyota', model: 'Corolla', year: 2025);
+  myCar.displayInfo();
 }
