@@ -1,3 +1,5 @@
+import 'dart:io';
+
 // Problem 1: Check odd and even number
 // void main() {
 //   print('Enter a number: ');
@@ -149,21 +151,41 @@
 //   myBook.borrowBook();
 // }
 
-class Car {
-  String brand;
-  String model;
-  int year;
+// class Car {
+//   String brand;
+//   String model;
+//   int year;
 
-  Car({required this.brand, required this.model, required this.year});
+//   Car({required this.brand, required this.model, required this.year});
 
-  void displayInfo() {
-    print("Car Brand: $brand");
-    print("Car Model: $model");
-    print("Car Year: $year");
+//   void displayInfo() {
+//     print("Car Brand: $brand");
+//     print("Car Model: $model");
+//     print("Car Year: $year");
+//   }
+// }
+
+// void main() {
+//   Car myCar = Car(brand: 'toyota', model: 'Corolla', year: 2025);
+//   myCar.displayInfo();
+// }
+
+// Problem: Student Information System
+class Student {
+  String name;
+  int age;
+  String grade;
+
+  Student({required this.name, required this.age, required this.grade});
+
+  void showStudentDetails() {
+    print("Student Name: $name");
+    print("Student Age: $age");
+    print("Student Grade: $grade");
   }
 }
 
 void main() {
-  Car myCar = Car(brand: 'toyota', model: 'Corolla', year: 2025);
-  myCar.displayInfo();
+  Student student1 = Student(name: "Tanvir Khan", age: 25, grade: "A");
+  student1.showStudentDetails();
 }
